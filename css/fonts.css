@@ -1,0 +1,11 @@
+/*noinspection ALL*/
+
+@font-face {
+    font-family: "Thedus-Condensed";
+    src: url(nui://lmtls-nui/assets/Thedus-Condensed.ttf);
+}
+
+@font-face {
+    font-family: "Thedus-Condensed-Light";
+    src: url(nui://lmtls-nui/assets/Thedus-CondensedLight.ttf);
+}
