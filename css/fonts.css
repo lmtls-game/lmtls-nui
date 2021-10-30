@@ -1,11 +1,53 @@
 /*noinspection ALL*/
 
 @font-face {
-    font-family: "Thedus-Condensed";
-    src: url(nui://lmtls-nui/assets/Thedus-Condensed.ttf);
+    font-family: 'Thedus';
+    src: url('nui://lmtls-nui/assets/Thedus-CondensedLight.otf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "Thedus-Condensed-Light";
-    src: url(nui://lmtls-nui/assets/Thedus-CondensedLight.ttf);
+    font-family: 'Thedus';
+    src: url('nui://lmtls-nui/assets/Thedus-Condensed.otf');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    font-stretch: condensed;
 }
+
+@font-face {
+    font-family: 'Thedus';
+    src: url('nui://lmtls-nui/assets/Thedus-WideLight.otf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Thedus';
+    src: url('nui://lmtls-nui/assets/Thedus-Wide.otf');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Thedus Stencil';
+    src: url('nui://lmtls-nui/assets/Thedus-StencilCondensed.otf');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    font-stretch: condensed;
+}
+
+
+@font-face {
+    font-family: 'Thedus Stencil';
+    src: url('nui://lmtls-nui/assets/Thedus-StencilWide.otf');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
