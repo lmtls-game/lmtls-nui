@@ -1,6 +1,6 @@
 /*noinspection CssUnknownTarget*/
 
-@import url(nui://lmtls-nui/css/fonts.css);
+@import url(/css/fonts.css);
 
 :root {
     --clr-1: #cf291d;

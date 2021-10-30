@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Thedus';
-    src: url('nui://lmtls-nui/assets/Thedus-CondensedLight.otf');
+    src: url('/assets/Thedus-CondensedLight.otf');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'Thedus';
-    src: url('nui://lmtls-nui/assets/Thedus-Condensed.otf');
+    src: url('/assets/Thedus-Condensed.otf');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -19,7 +19,7 @@
 
 @font-face {
     font-family: 'Thedus';
-    src: url('nui://lmtls-nui/assets/Thedus-WideLight.otf');
+    src: url('/assets/Thedus-WideLight.otf');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -27,7 +27,7 @@
 
 @font-face {
     font-family: 'Thedus';
-    src: url('nui://lmtls-nui/assets/Thedus-Wide.otf');
+    src: url('/assets/Thedus-Wide.otf');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -35,7 +35,7 @@
 
 @font-face {
     font-family: 'Thedus Stencil';
-    src: url('nui://lmtls-nui/assets/Thedus-StencilCondensed.otf');
+    src: url('/assets/Thedus-StencilCondensed.otf');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -45,7 +45,7 @@
 
 @font-face {
     font-family: 'Thedus Stencil';
-    src: url('nui://lmtls-nui/assets/Thedus-StencilWide.otf');
+    src: url('/assets/Thedus-StencilWide.otf');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
