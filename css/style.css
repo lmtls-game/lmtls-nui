@@ -1,0 +1,21 @@
+@import url(/css/variables.css);
+
+*::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: var(--clr-2);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+    background-color: var(--clr-1);
+    box-shadow: -3px 0 8px var(--clr-2);
+}
