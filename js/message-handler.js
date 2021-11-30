@@ -8,6 +8,10 @@
 
         const { message, data } = event.data;
 
+        if (!message) {
+            return;
+        }
+
         const handler = messageHandlers[message];
 
         if (!handler) {
