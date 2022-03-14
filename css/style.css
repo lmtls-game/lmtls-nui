@@ -1,5 +1,11 @@
 @import url(/css/variables.css);
 
+*, *::before, *::after {
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 *::-webkit-scrollbar {
     width: 3px;
     height: 3px;
