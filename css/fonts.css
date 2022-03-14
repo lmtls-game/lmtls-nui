@@ -6,7 +6,9 @@
     font-weight: 300;
     font-style: normal;
     font-display: swap;
+    font-stretch: condensed;
 }
+
 
 @font-face {
     font-family: 'Thedus';
@@ -15,6 +17,16 @@
     font-style: normal;
     font-display: swap;
     font-stretch: condensed;
+}
+
+
+@font-face {
+    font-family: 'Thedus';
+    src: url('/assets/Thedus-Wide.otf');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    font-stretch: expanded;
 }
 
 @font-face {
@@ -26,11 +38,12 @@
 }
 
 @font-face {
-    font-family: 'Thedus';
-    src: url('/assets/Thedus-Wide.otf');
+    font-family: 'Thedus Stencil';
+    src: url('/assets/Thedus-StencilWide.otf');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
+    font-stretch: expanded;
 }
 
 @font-face {
@@ -41,13 +54,3 @@
     font-display: swap;
     font-stretch: condensed;
 }
-
-
-@font-face {
-    font-family: 'Thedus Stencil';
-    src: url('/assets/Thedus-StencilWide.otf');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
