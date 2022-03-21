@@ -19,6 +19,10 @@ class ClipPathTopLeft extends ClipPath
         size ??= this.defaultSize;
         return `0 ${size}%, ${size}% 0`;
     }
+
+    getDefault() {
+        return this.getXY(0);
+    }
 }
 
 class ClipPathTopRight extends ClipPath
@@ -28,6 +32,10 @@ class ClipPathTopRight extends ClipPath
     getXY(size) {
         size ??= this.defaultSize;
         return `${100 - size}% 0, 100% ${size}%`;
+    }
+
+    getDefault() {
+        return this.getXY(0);
     }
 }
 
@@ -39,6 +47,10 @@ class ClipPathBottomRight extends ClipPath
         size ??= this.defaultSize;
         return `100% ${100 - size}%, ${100 - size}% 100%`;
     }
+
+    getDefault() {
+        return this.getXY(0);
+    }
 }
 
 class ClipPathBottomLeft extends ClipPath
@@ -48,6 +60,10 @@ class ClipPathBottomLeft extends ClipPath
     getXY(size) {
         size ??= this.defaultSize;
         return `${size}% 100%, 0 ${100 - size}%`;
+    }
+
+    getDefault() {
+        return this.getXY(0);
     }
 }
 
@@ -67,6 +83,9 @@ class ClipPathBottomLeft extends ClipPath
 
     function getClipPathSetting(e) {
         const clipPathSetting = {};
+        for (const clipPathCorner of clipPathCorners) {
+            clipPathSetting[clipPathCorner.toPropertyName()] = clipPathCorner.getDefault();
+        }
         for (const className of e.classList) {
             if (!className.includes("clipped-")) {
                 continue;
