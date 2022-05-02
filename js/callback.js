@@ -3,7 +3,7 @@ window.GetParentResourceName ??= () => location.hostname;
 /**
  * Invoke nui callback.
  * @param {string} name
- * @param {any|undefined} body
+ * @param {any} [body]
  * @returns {Promise<any>}
  */
 function invokeNuiCallback(name, body) {
