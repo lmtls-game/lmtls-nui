@@ -15,11 +15,11 @@ class GameTime
         this.hours = Math.trunc((this.time / 60) % 24);
     }
 
-    advanceMinute() {
-        this.advanceMinuteBy(1);
+    advanceMinutes() {
+        this.advanceMinutesBy(1);
     }
 
-    advanceMinuteBy(minutes) {
+    advanceMinutesBy(minutes) {
         this.time += minutes;
         this.calculate();
     }
@@ -50,7 +50,7 @@ class GameTime
             return;
         }
         this._interval = setInterval(() => {
-            this.advanceMinute();
+            this.advanceMinutes();
             callback(this.hours, this.minutes);
         }, 1000);
     }
