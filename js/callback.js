@@ -3,15 +3,18 @@ window.GetParentResourceName ??= () => location.hostname;
 /**
  * Invoke nui callback.
  * @param {string} name
- * @param {any} body
+ * @param {any|undefined} body
  * @returns {Promise<any>}
  */
 function invokeNuiCallback(name, body) {
-    return fetch(`https://${GetParentResourceName()}/${name}`, {
+    const options = {
         method: "POST",
         headers: {
             "Content-Type": "application/json; charset=UTF-8"
-        },
-        body: JSON.stringify(body)
-    }).then(r => r.json());
+        }
+    };
+    if (body) {
+        options["body"] = JSON.stringify(body);
+    }
+    return fetch(`https://${GetParentResourceName()}/${name}`, options).then(r => r.json());
 }
