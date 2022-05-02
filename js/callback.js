@@ -16,5 +16,7 @@ function invokeNuiCallback(name, body) {
     if (body) {
         options["body"] = JSON.stringify(body);
     }
-    return fetch(`https://${GetParentResourceName()}/${name}`, options).then(r => r.json());
+    return fetch(`https://${GetParentResourceName()}/${name}`, options)
+        .then(r => r.json())
+        .then(r => r.value);
 }
