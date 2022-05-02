@@ -1,12 +1,17 @@
 window.GetParentResourceName ??= () => location.hostname;
 
+const mockedNuiCallback = {};
+
 /**
  * Invoke nui callback.
  * @param {string} name
  * @param {any} [body]
  * @returns {Promise<any>}
  */
-function invokeNuiCallback(name, body) {
+async function invokeNuiCallback(name, body) {
+    if (mockedNuiCallback[name]) {
+        return mockedNuiCallback[name];
+    }
     const options = {
         method: "POST",
         headers: {
