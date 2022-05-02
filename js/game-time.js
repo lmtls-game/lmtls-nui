@@ -73,8 +73,8 @@ class GameTime
     }
 
     to12String() {
-        let hour = this.hours % 12 || 12;
-        let p = this.toP();
+        const hour = this.hours % 12 || 12;
+        const p = this.toP();
         return `${hour}:${this.minutes.toString().padStart(2, "0")} ${p}`;
     }
 }
