@@ -64,18 +64,22 @@ class GameTime
         this._interval = undefined;
     }
 
-    toString() {
-        return `${this.hours}:${this.minutes.toString().padStart(2, "0")}`;
-    }
-
     toP() {
         return this.hours >= 12 ? "PM" : "AM";
+    }
+
+    withPadding(value) {
+        return value.toString().padStart(2, "0");
+    }
+
+    toString() {
+        return `${this.withPadding(this.hours)}:${this.withPadding(this.minutes)}`;
     }
 
     to12String() {
         const hour = this.hours % 12 || 12;
         const p = this.toP();
-        return `${hour}:${this.minutes.toString().padStart(2, "0")} ${p}`;
+        return `${this.withPadding(hour)}:${this.withPadding(this.minutes)} ${p}`;
     }
 }
 
