@@ -25,3 +25,23 @@ async function invokeNuiCallback(name, body) {
         .then(r => r.json())
         .then(r => r.value);
 }
+
+function mockNuiCallbacks(name) {
+    if (!mockedNuiCallback["nui-callbacks"]) {
+        mockedNuiCallback["nui-callbacks"] = [];
+    }
+    mockedNuiCallback["nui-callbacks"].push({ name });
+}
+
+async function constructNuiCallbacksInstance()
+{
+    const nuiInstance = {};
+    const callbacks = await invokeNuiCallback("nui-callbacks");
+    for (const callback of callbacks) {
+        const name = callback.name;
+        nuiInstance[name] = async (body) => {
+            return invokeNuiCallback(name, body);
+        };
+    }
+    return nuiInstance;
+}
