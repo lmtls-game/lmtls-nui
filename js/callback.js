@@ -10,7 +10,7 @@ const mockedNuiCallback = {};
  */
 async function invokeNuiCallback(name, body) {
     if (mockedNuiCallback[name]) {
-        return mockedNuiCallback[name];
+        return typeof mockedNuiCallback[name] === "function" ? mockedNuiCallback[name]() : mockedNuiCallback[name];
     }
     const options = {
         method: "POST",
