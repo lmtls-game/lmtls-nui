@@ -15,7 +15,7 @@
         const handler = messageHandlers[message];
 
         if (!handler) {
-            throw new Error("Unknown message handler");
+            throw new Error(`Unknown message handler ${message}.`);
         }
 
         handler(data);
