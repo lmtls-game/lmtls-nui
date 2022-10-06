@@ -38,7 +38,7 @@ async function constructNuiCallbacksInstance()
     const nuiInstance = {};
     const callbacks = await invokeNuiCallback("nui-callbacks");
     for (const callback of callbacks) {
-        const name = callback.name;
+        const name = callback;
         nuiInstance[name] = async (body) => {
             return invokeNuiCallback(name, body);
         };
