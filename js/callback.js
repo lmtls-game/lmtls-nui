@@ -2,6 +2,8 @@ window.GetParentResourceName ??= () => location.hostname;
 
 const mockedNuiCallback = {};
 
+const NUI_CALLBACKS_NAME = "nui-callbacks"
+
 /**
  * Invoke nui callback.
  * @param {string} name
@@ -27,16 +29,16 @@ async function invokeNuiCallback(name, body) {
 }
 
 function mockNuiCallbacks(name) {
-    if (!mockedNuiCallback["nui-callbacks"]) {
-        mockedNuiCallback["nui-callbacks"] = [];
+    if (!mockedNuiCallback[NUI_CALLBACKS_NAME]) {
+        mockedNuiCallback[NUI_CALLBACKS_NAME] = [];
     }
-    mockedNuiCallback["nui-callbacks"].push({ name });
+    mockedNuiCallback[NUI_CALLBACKS_NAME].push({ name });
 }
 
-async function constructNuiCallbacksInstance()
+async function constructNuiCallbacksInstance(nuiCallbacks)
 {
     const nuiInstance = {};
-    const callbacks = await invokeNuiCallback("nui-callbacks");
+    const callbacks = nuiCallbacks ?? await invokeNuiCallback(NUI_CALLBACKS_NAME);
     for (const callback of callbacks) {
         const name = callback;
         nuiInstance[name] = async (body) => {
